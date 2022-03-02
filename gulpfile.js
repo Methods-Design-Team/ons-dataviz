@@ -1,6 +1,3 @@
-let gulp = require('gulp');
-let runSeq = require('run-sequence');
-
 gulp.task('heroku:production', function() {
-  runSeq('clean', 'build', 'minify');
+  console.log('hello'); // the task does not need to do anything.
 });
