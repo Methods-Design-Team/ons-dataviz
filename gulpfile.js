@@ -1,6 +1,7 @@
 const browserSync = require('browser-sync');
 const browserify = require('browserify');
 const gulp = require('gulp');
+const runSeq = require('run-sequence');
 const gulpIf = require('gulp-if');
 const gulpPostCss = require('gulp-postcss');
 const gulpDartSass = require('gulp-dart-sass');
@@ -140,13 +141,6 @@ gulp.task('start', gulp.series('build-assets', 'watch-and-build', 'start-dev-ser
 gulp.task('watch', gulp.series('watch-and-build', 'start-dev-server'));
 gulp.task('build', gulp.series('copy-static-files', 'build-assets', 'build-pages'));
 gulp.task('build-package', gulp.series('copy-static-files', 'copy-js-files', 'build-assets'));
-gulp.task('serve', function() {
-  browserSync({
-    server: {
-      baseDir: './',
-    },
-    port: process.env.PORT || 5000,
-  });
-
-  gulp.watch(['*.html', 'css/*.css', 'js/*.js', 'views/*.html', 'template/*.html', './*.html'], { cwd: 'app' }, reload);
+gulp.task('heroku:production', function() {
+  runSeq('clean', 'build', 'minify');
 });
