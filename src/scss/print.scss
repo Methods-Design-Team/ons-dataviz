@@ -1,0 +1,66 @@
+$color-black: #222;
+
+.ons-btn,
+.ons-summary__actions,
+.ons-footer,
+.ons-cookies-banner,
+.ons-language-links,
+.ons-breadcrumb {
+  display: none !important;
+}
+
+a::after {
+  content: ' (' attr(href) ') ';
+}
+
+.ons-header {
+  &__main,
+  &__bottom {
+    background: transparent;
+  }
+
+  &__title {
+    color: $color-black;
+  }
+
+  &-nav {
+    display: block;
+    &__item {
+      display: inline-block;
+    }
+    &__item--active {
+      border: 0;
+    }
+    &__link,
+    &__link:hover {
+      color: $color-black;
+    }
+  }
+
+  & &__svg-logo {
+    fill: $color-black;
+  }
+}
+
+.ons-collapsible {
+  &--initialised & {
+    &__icon {
+      display: none;
+    }
+
+    &__title {
+      color: $color-black;
+      margin-bottom: 1rem;
+      margin-left: -1.5rem;
+      text-decoration: none;
+    }
+
+    &__content {
+      display: block;
+    }
+  }
+}
+
+.ons-hero {
+  color-adjust: exact;
+}

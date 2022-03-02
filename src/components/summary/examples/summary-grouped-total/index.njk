@@ -1,0 +1,68 @@
+{% from "components/summary/_macro.njk" import onsSummary %}
+{{
+    onsSummary({
+        "summaries": [
+            {
+                "groups": [
+                    {
+                        "groupTitle": "Summary - Section Title",
+                        "headers":["Question", "Answer given", "Change answer"],
+                        "rows": [
+                            {
+                                "rowTitle": "Total value of acquisitions for transport assets and equipment",
+                                "rowItems": [
+                                    {
+                                        "valueList": [
+                                            {
+                                                "text": "£9,000.00"
+                                            }
+                                        ],
+                                        "actions": [
+                                            {
+                                                "text": "Change",
+                                                "ariaLabel": "Change answer",
+                                                "url": "#0"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "rowTitle": "Total value of acquisitions for computers and peripheral devices (hardware)",
+                                "rowItems": [
+                                    {
+                                        "valueList": [
+                                            {
+                                                "text": "£225,000.00"
+                                            }
+                                        ],
+                                        "actions": [
+                                            {
+                                                "text": "Change",
+                                                "ariaLabel": "Change answer",
+                                                "url": "#0"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "rowTitle": "Grand total for value of acquisitions",
+                                "total": true,
+                                "rowItems": [
+                                    {
+                                        "valueList": [
+                                            {
+                                                "text": "£234,000.00"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    })
+}}

@@ -1,0 +1,10 @@
+{% from "components/button/_macro.njk" import onsButton %}
+
+{{
+    onsButton({
+        "type": 'button',
+        "text": 'Print this page',
+        "buttonStyle": 'print',
+        "variants": ['small', 'secondary']
+    })
+}}

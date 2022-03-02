@@ -1,0 +1,20 @@
+node_modules/
+build/
+*.log
+.DS_store
+coverage/
+.vscode/
+.idea/
+package-lock.json
+# npm package folders
+/components/
+/page-templates/
+/templates/
+/css/
+/favicons/
+/fonts/
+/img/
+/scripts/
+/scss/
+
+secrets.yml

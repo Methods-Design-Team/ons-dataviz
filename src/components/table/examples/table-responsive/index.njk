@@ -1,0 +1,89 @@
+{% from "components/table/_macro.njk" import onsTable %}
+{{
+    onsTable({
+        "variants": 'responsive',
+        "caption": "Responsive table with stacked rows for small viewports",
+        "ths": [
+            {
+                "value": "Country"
+            },
+            {
+                "value": "Highest mountain"
+            },
+            {
+                "value": "Height in metres",
+                "numeric": true
+            }
+        ],
+        "trs": [
+            {
+                "tds": [
+                    {
+                        "value": "Scotland",
+                        "data": "Country"
+                    },
+                    {
+                        "value": "Ben Nevis",
+                        "data": "Highest mountain"
+                    },
+                    {
+                        "value": "1,345",
+                        "data": "Height",
+                        "numeric": true
+                    }
+                ]
+            },
+            {
+                "tds": [
+                    {
+                        "value": "Wales",
+                        "data": "Country"
+                    },
+                    {
+                        "value": "Snowdon",
+                        "data": "Highest mountain"
+                    },
+                    {
+                        "value": "1,085",
+                        "data": "Height",
+                        "numeric": true
+                    }
+                ]
+            },
+            {
+                "tds": [
+                    {
+                        "value": "England",
+                        "data": "Country"
+                    },
+                    {
+                        "value": "Scafell Pike",
+                        "data": "Highest mountain"
+                    },
+                    {
+                        "value": "978",
+                        "data": "Height",
+                        "numeric": true
+                    }
+                ]
+            },
+            {
+                "tds": [
+                    {
+                        "value": "Northern Ireland",
+                        "data": "Country"
+                    },
+                    {
+                        "value": "Slieve Donard",
+                        "data": "Highest mountain"
+                    },
+                    {
+                        "value": "850",
+                        "data": "Height",
+                        "numeric": true
+                    }
+                ]
+            }
+        ]
+    })
+}}

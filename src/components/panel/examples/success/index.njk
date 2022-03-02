@@ -1,0 +1,10 @@
+{% from "components/panel/_macro.njk" import onsPanel %}
+
+{{
+    onsPanel({
+        "type": 'success',
+        "id": 'success-id',
+        "iconType": 'check',
+        "body": 'Information has been successfully submitted'
+    })
+}}

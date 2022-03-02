@@ -1,0 +1,59 @@
+{% from "components/question/_macro.njk" import onsQuestion %}
+{% from "components/radios/_macro.njk" import onsRadios %}
+
+{% call onsQuestion({
+    "title": "How satisfied are you with this service?",
+    "legendIsQuestionTitle": true
+}) %}
+    {{
+        onsRadios({
+            "dontWrap": true,
+            "name": "satisfaction",
+            "or": "Or",
+            "radios": [
+                {
+                    "id": "very-satisfied",
+                    "label": {
+                        "text": "Very satisfied"
+                    },
+                    "value": "very-satisfied"
+                },
+                {
+                    "id": "somewhat-satisfied",
+                    "label": {
+                        "text": "Somewhat satisfied"
+                    },
+                    "value": "somewhat-satisfied"
+                },
+                {
+                    "id": "neither",
+                    "label": {
+                        "text": "Neither satisfied or dissatisfied"
+                    },
+                    "value": "neither"
+                },
+                {
+                    "id": "somewhat-dissatisfied",
+                    "label": {
+                        "text": "Somewhat dissatisfied"
+                    },
+                    "value": "somewhat-dissatisfied"
+                },
+                {
+                    "id": "very-dissatisfied",
+                    "label": {
+                        "text": "Very dissatisfied"
+                    },
+                    "value": "very-dissatisfied"
+                },
+                {
+                    "id": "no",
+                    "label": {
+                        "text": "I don’t want to give feedback"
+                    },
+                    "value": "no"
+                }
+            ]
+        })
+    }}
+{% endcall %}

@@ -1,0 +1,13 @@
+{% from "components/input/_macro.njk" import onsInput %}
+{{
+    onsInput({
+        "id": "telephone",
+        "type": "tel",
+        "autocomplete": "tel",
+        "width": "15",
+        "label": {
+            "text": "UK mobile number",
+            "description": "This will not be stored and only used once to send your access code"
+        }
+    })
+}}

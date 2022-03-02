@@ -1,0 +1,21 @@
+.ons-field +,
+.ons-field-group +,
+.ons-fieldset +,
+.ons-input-items +,
+.ons-figure +,
+.ons-panel +,
+.ons-summary__group +,
+.ons-collapsible:not(.ons-collapsible--accordion) + {
+  .ons-figure,
+  .ons-field,
+  .ons-field-group,
+  .ons-fieldset,
+  .ons-input-items,
+  .ons-summary__group {
+    margin-top: 1.5rem;
+  }
+}
+
+.ons-breadcrumb + .ons-grid {
+  margin-top: -1rem;
+}

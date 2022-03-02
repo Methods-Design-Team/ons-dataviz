@@ -1,0 +1,17 @@
+{% from "components/breadcrumbs/_macro.njk" import onsBreadcrumbs %}
+
+{{
+    onsBreadcrumbs({
+        "ariaLabel": 'Back',
+        "itemsList": [
+            {
+                "url": '/',
+                "id": "back",
+                "text": 'Back',
+                "attributes": {
+                    "data-attribute": "Example attribute"
+                }
+            }
+        ]
+    })
+}}

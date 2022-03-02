@@ -1,0 +1,34 @@
+{% from "components/input/_macro.njk" import onsInput %}
+{{
+    onsInput({
+        "id": "suffixed-per-cent",
+        "type": "number",
+        "width": "3",
+        "autocomplete": "off",
+        "required": true,
+        "label": {
+            "text": "People with internet access"
+        },
+        "suffix": {
+            "title": "per cent",
+            "text": "%"
+        }
+    })
+}}
+{{
+    onsInput({
+        "id": "suffixed-centimetres",
+        "type": "number",
+        "width": "4",
+        "autocomplete": "off",
+        "required": true,
+        "label": {
+            "text": "Length",
+            "description": "For example enter 1250 for 12.5m"
+        },
+        "suffix": {
+            "title": "centimetres",
+            "text": "cm"
+        }
+    })
+}}

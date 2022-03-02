@@ -1,0 +1,216 @@
+---
+layout: example
+---
+{% from "components/skip-to-content/_macro.njk" import onsSkipToContent %}
+{% from "components/header/_macro.njk" import onsHeader %}
+{% from "components/footer/_macro.njk" import onsFooter %}
+{% from "components/breadcrumbs/_macro.njk" import onsBreadcrumbs %}
+{% from "components/related-content/_macro.njk" import onsRelatedContent %}
+{% from "components/section-navigation/_macro.njk" import onsSectionNavigation %}
+
+<div class="ons-pattern-lib-block">
+    <div class="ons-pattern-lib-block__label">block: headIcons</div>
+</div>
+
+<div class="ons-pattern-lib-block">
+    <div class="ons-pattern-lib-block__label">block: head</div>
+</div>
+
+<div class="ons-pattern-lib-block">
+    <div class="ons-pattern-lib-block__label">block: bodyStart</div>
+</div>
+
+<div class="ons-pattern-lib-block">
+    <div class="ons-pattern-lib-block__label">block: body</div>
+
+    <div class="ons-pattern-lib-block">
+        <div class="ons-pattern-lib-block__label">block: skipLink</div>
+        {{
+            onsSkipToContent({
+                "text": "Skip to content"
+            })
+        }}
+    </div>
+
+    <div class="ons-pattern-lib-block">
+        <div class="ons-pattern-lib-block__label">block: preHeader</div>
+    </div>
+
+    <div class="ons-pattern-lib-block">
+        <div class="ons-pattern-lib-block__label">block: header</div>
+        {{
+            onsHeader({
+                "title": "Design system",
+                "logoHref": "#0",
+                "toggleButton": {
+                    "text": "Menu",
+                    "ariaLabel": "Toggle main menu"
+                },
+                "navigation": {
+                    "id": "main-nav",
+                    "ariaLabel": "Main menu",
+                    "ariaListLabel": "Navigation menu",
+                    "currentPath": "#patterns",
+                    "itemsList": [
+                        {
+                            "title": "Home",
+                            "url": "#home"
+                        },
+                        {
+                            "title": "Guidance",
+                            "url": "#0"
+                        },
+                        {
+                            "title": "Components",
+                            "url": "#0"
+                        },
+                        {
+                            "title": "Foundations",
+                            "url": "#0"
+                        },
+                        {
+                            "title": "Patterns",
+                            "url": "#patterns"
+                        }
+                    ]
+                }
+            })
+        }}
+    </div>
+
+    <div class="ons-pattern-lib-block">
+        <div class="ons-pattern-lib-block__label">block: pageContent</div>
+
+        <div class="ons-pattern-lib-block">
+            <div class="ons-pattern-lib-block__label">block: preMain</div>
+            {{
+                onsBreadcrumbs({
+                    "ariaLabel": 'Breadcrumbs',
+                    "itemsList": [
+                        {
+                            "url": '/',
+                            "text": 'Home'
+                        },
+                        {
+                            "url": '/components',
+                            "text": 'Components'
+                        }
+                    ]
+                })
+            }}
+        </div>
+
+        <div class="ons-grid ons-grid--flex ons-grid--column@xxs@m">
+            <div class="ons-grid__col ons-grid__col--flex ons-u-flex-shrink">
+                <div class="ons-pattern-lib-block">
+                    <div class="ons-pattern-lib-block__label">block: aside (<code>before</code>)</div>
+                    <h3 class="ons-u-fs-r--b">Ask users for...</h3>
+                    {{
+                        onsSectionNavigation({
+                            "variants": "vertical",
+                            "id": "section-menu",
+                            "currentPath": "#email-addresses",
+                            "itemsList": [
+                                {
+                                    "title": "Access codes",
+                                    "url": "#0"
+
+                                },
+                                {
+                                    "title": "Addresses",
+                                    "url": "#0"
+                                },
+                                {
+                                    "title": "Dates",
+                                    "url": "#0"
+                                },
+                                {
+                                    "title": "Durations",
+                                    "url": "#0"
+                                },
+                                {
+                                    "title": "Email addresses",
+                                    "url": "#email-addresses"
+                                }
+                            ]
+                        })
+                    }}
+                </div>
+            </div>
+            <div class="ons-grid__col ons-grid__col--flex ons-u-flex-grow">
+                <div class="ons-pattern-lib-block">
+                    <div class="ons-pattern-lib-block__label">block: main</div>
+                    <h1>Page content</h1>
+                </div>
+            </div>
+            <div class="ons-grid__col ons-grid__col--flex">
+                <div class="ons-pattern-lib-block">
+                    <div class="ons-pattern-lib-block__label">block: aside (<code>after</code>)</div>
+                    {{
+                        onsRelatedContent({
+                            "ariaLabel": 'Related content',
+                            "rows": [
+                                {
+                                    "id": 'related-content',
+                                    "title": 'Related content',
+                                    "itemsList": [
+                                        {
+                                            "text": 'Base page template',
+                                            "url": '#0'
+                                        },
+                                        {
+                                            "text": 'Contribute',
+                                            "url": '#0'
+                                        },
+                                        {
+                                            "text": 'Contact us',
+                                            "url": '#0'
+                                        }
+                                    ]
+                                }
+                            ]
+
+                        })
+                    }}
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="ons-pattern-lib-block">
+        <div class="ons-pattern-lib-block__label">block: footer</div>
+        {{
+            onsFooter({
+                "rows": [
+                    {
+                        "itemsList": [
+                            {
+                                "text": 'Contact us',
+                                "url": '#'
+                            },
+                            {
+                                "text": 'Cookies and privacy',
+                                "url": '#'
+                            }
+                        ]
+                    }
+                ],
+                "OGLLink": {
+                    "pre": 'All content is available under the',
+                    "link": 'Open Government Licence v3.0',
+                    "url": 'https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/',
+                    "post": ', except where otherwise stated'
+                }
+            })
+        }}
+    </div>
+</div>
+
+<div class="ons-pattern-lib-block">
+    <div class="ons-pattern-lib-block__label">block: bodyEnd</div>
+</div>
+
+<div class="ons-pattern-lib-block">
+    <div class="ons-pattern-lib-block__label">block: scripts</div>
+</div>

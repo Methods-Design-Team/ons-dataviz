@@ -1,0 +1,78 @@
+{% from "components/summary/_macro.njk" import onsSummary %}
+
+{{ onsSummary({
+    "classes": "ons-u-mb-l",
+    "summaries": [
+        {
+            "groups": [
+                {
+                    "headers":["Name", "Action"],
+                    "rows": [
+                        {
+                            "rowTitle": "Joe Bloggs (You)",
+                            "rowItems": [
+                                {
+                                    "iconType": "person",
+                                    "actions": [
+                                        {
+                                            "text": "Change",
+                                            "ariaLabel": "Change details for Joe Bloggs",
+                                            "url": "#0"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "rowTitle": "Barry Scott",
+                            "rowItems": [
+                                {
+                                    "iconType": "person",
+                                    "actions": [
+                                        {
+                                            "text": "Change",
+                                            "ariaLabel": "Change details for Barry Scott",
+                                            "url": "#0"
+                                        },
+                                        {
+                                            "text": "Remove",
+                                            "ariaLabel": "Remove Barry Scott",
+                                            "url": "#0"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "rowTitle": "Wilhelmina Susannah Clementine-Smith",
+                            "rowItems": [
+                                {
+                                    "iconType": "person",
+                                    "actions": [
+                                        {
+                                            "text": "Change",
+                                            "ariaLabel": "Change details for Susan Gill",
+                                            "url": "#0"
+                                        },
+                                        {
+                                            "text": "Remove",
+                                            "ariaLabel": "Remove Susan Gill",
+                                            "url": "#0"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "summaryLink": {
+                        "text": "Add someone to this household",
+                        "url": "#0",
+                        "attributes": {
+                            "data-qa": "add-item-link"
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}) }}

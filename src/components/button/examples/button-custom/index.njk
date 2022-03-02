@@ -1,0 +1,20 @@
+{% from "components/button/_macro.njk" import onsButton %}
+
+<div class="ons-u-mb-m">
+    {{
+        onsButton({
+            "type": 'button',
+            "text": 'Done',
+            "iconType": 'check'
+        })
+    }}
+</div>
+<div>
+    {{
+        onsButton({
+            "text": 'Search',
+            "iconType": 'search',
+            "variants": ['secondary', 'small']
+        })
+    }}
+</div>

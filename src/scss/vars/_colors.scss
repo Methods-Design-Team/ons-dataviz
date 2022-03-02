@@ -1,0 +1,103 @@
+@import '../helpers/functions';
+
+// =============================================================================
+// ONS Brand guidelines for Colour: https://www.notion.so/Colours-9cd14589e0764e33a3b3c5a6762f37ae
+// Tints: If you are using tints of a colour, use either 70%, 40% or 10%. Tints are created by adding white (30%, 60% or 90%), rather than using transparency.
+// =============================================================================
+
+// Grey palette
+$color-black: #222;
+$color-grey-100: #414042;
+$color-grey-75: #707071;
+$color-grey-35: #bcbcbd;
+$color-grey-15: #e2e2e3;
+$color-grey-5: #f5f5f6;
+$color-white: #fff;
+
+// Primary brand palette
+$color-night-blue: #003c57; // ONS logo primary
+$color-spring-green: #a8bd3a; // ONS logo accent
+$color-ocean-blue: #206095;
+$color-sky-blue: #27a0cc;
+$color-aqua-teal: #00a3a6;
+
+// Supporting palette
+$color-leaf-green: #0f8243;
+$color-ruby-red: #d0021b;
+$color-jaffa-orange: #fa6401;
+$color-sun-yellow: #fbc900;
+$color-neon-yellow: #f0f762;
+
+// Census 2021
+$color-indigo-blue: #3c388e;
+$color-plum-purple: #902082;
+$color-flamingo-pink: #df0667;
+
+// Theme branding
+$color-branded: $color-ocean-blue !default;
+$color-branded-tint: tint($color-branded, 90%) !default;
+$color-branded-secondary: $color-night-blue !default;
+$color-branded-secondary-tint: tint($color-branded-secondary, 90%) !default;
+$color-branded-tertiary: $color-aqua-teal !default;
+$color-branded-tertiary-tint: tint($color-branded-tertiary, 90%) !default;
+$color-branded-supporting: $color-spring-green !default;
+$color-branded-supporting-tint: tint($color-branded-supporting, 90%) !default;
+
+// =============================================================================
+// Assignment
+// =============================================================================
+
+// Headers, footers, banners
+$color-header: $color-branded !default;
+$color-header-top: $color-white !default;
+$color-header-top-internal: $color-branded-secondary !default;
+$color-cta-bg: $color-branded-tint !default;
+$color-banner-bg: $color-grey-5 !default;
+$color-banner-bg-dark: $color-grey-15 !default;
+
+// Typography
+$color-text: $color-black !default;
+$color-text-light: $color-grey-75 !default;
+$color-text-inverse: $color-white !default;
+$color-text-banner: $color-black !default;
+$color-text-link: $color-ocean-blue !default;
+$color-text-link-hover: $color-night-blue !default;
+$color-text-link-active: $color-night-blue !default;
+$color-text-link-focus: $color-black !default;
+$color-text-inverse-link: $color-white !default;
+$color-text-inverse-link-hover: $color-grey-5 !default;
+$color-text-banner-link: $color-grey-100 !default;
+$color-text-banner-link-hover: $color-black !default;
+
+// Foundations
+$color-focus: $color-sun-yellow !default;
+$color-highlight: $color-neon-yellow !default;
+
+// Borders
+$color-borders: $color-grey-75 !default;
+$color-borders-indent: $color-grey-35 !default;
+$color-document-border: $color-grey-15 !default;
+$color-document-border-focus: $color-black !default;
+
+// Form elements
+$color-button: $color-leaf-green !default;
+$color-button-secondary: $color-grey-15 !default;
+$color-input: $color-black !default;
+
+// Panels and status
+$color-info: $color-ocean-blue !default;
+$color-info-tint: tint($color-info, 90) !default;
+$color-info-vibrant: scale-color($color-info, $lightness: 20%, $saturation: 30%) !default;
+$color-success: $color-leaf-green !default;
+$color-success-tint: tint($color-success, 90) !default;
+$color-success-vibrant: scale-color($color-success, $lightness: 20%, $saturation: 30%) !default;
+$color-errors: $color-ruby-red !default;
+$color-errors-tint: tint($color-errors, 90) !default;
+$color-errors-vibrant: scale-color($color-errors, $lightness: 20%, $saturation: 30%) !default;
+$color-pending: $color-jaffa-orange !default;
+$color-pending-tint: tint($color-pending, 90) !default;
+$color-pending-vibrant: scale-color($color-pending, $lightness: 20%, $saturation: 30%) !default;
+$color-dead: $color-grey-75 !default;
+$color-instruction: $color-jaffa-orange !default;
+$color-instruction-tint: tint($color-instruction, 90) !default;
+$color-tag-bg: tint($color-leaf-green, 90) !default;

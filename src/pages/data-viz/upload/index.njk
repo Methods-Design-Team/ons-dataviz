@@ -1,0 +1,232 @@
+---
+title: Upload a new interactive
+layout: example
+sortOrder: 1
+---
+
++++
+{% from "components/card/_macro.njk" import onsCard %}
+{% from "components/hero/_macro.njk" import onsHero %}
+{% from "components/external-link/_macro.njk" import onsExternalLink %}
+{% from "components/header/_macro.njk" import onsHeader %}
+{% from "components/radios/_macro.njk" import onsRadios %}
+{% from "components/textarea/_macro.njk" import onsTextarea %}
+{% from "components/input/_macro.njk" import onsInput %}
+{% from "components/button/_macro.njk" import onsButton %}
+{% from "components/upload/_macro.njk" import onsUpload %}
+{% from "components/select/_macro.njk" import onsSelect %}
+{% from "components/breadcrumbs/_macro.njk" import onsBreadcrumbs %}
+
+{{
+    onsHeader({
+        "title": 'My visualisations',
+        "logoHref": '#0',
+        "mobileLogo": 'ons-logo-stacked-en',
+        "titleLogoHref": '#0'
+    })
+}}
+<div class="ons-container ons-container--wide">
+{{
+    onsBreadcrumbs({
+        "ariaLabel": 'Back',
+        "itemsList": [
+            {
+                "url": '/data-viz',
+                "id": "back",
+                "text": 'Back',
+                "attributes": {
+                    "data-attribute": "Example attribute"
+                }
+            }
+        ]
+    })
+}}
+ <h1 class="ons-u-fs-xxl ons-u-mt-l">Upload a new interactive</h1>
+
+    {{ onsInput({
+        "width": '30',
+        "id": 'webform-name',
+        "name": 'webform-name',
+        "label": {
+            "text": 'Title'
+        }
+    }) }}
+{{
+    onsUpload({
+        "id": "file",
+        "accept": ".zip",
+        "label": {
+            "description": "Only file type accepted is ZIP",
+            "text": "Upload a file"
+        }
+    })
+}}
+{{
+    onsSelect({
+        "id": "select",
+        "name": "select",
+        "label": {
+            "text": "Primary topic"
+        },
+        "options": [
+            {
+                "value": "",
+                "text": "Select an option",
+                "disabled": true,
+                "selected": true
+            },
+            {
+                "value": "general",
+                "text": "General"
+            },
+            {
+                "value": "people-who-live-here",
+                "text": "People who live here"
+            },
+            {
+                "value": "visitors",
+                "text": "Visitors"
+            },
+            {
+                "value": "household-accommodation",
+                "text": "Household and accommodation"
+            },
+            {
+                "value": "personal-details",
+                "text": "Personal details"
+            },
+            {
+                "value": "health",
+                "text": "Health"
+            },
+            {
+                "value": "qualifications",
+                "text": "Qualifications"
+            },
+            {
+                "value": "employment",
+                "text": "Employment"
+            }
+        ]
+    })
+}}
+{{
+    onsSelect({
+        "id": "select",
+        "name": "select",
+        "label": {
+            "text": "Topics"
+        },
+        "options": [
+            {
+                "value": "",
+                "text": "Select an option",
+                "disabled": true,
+                "selected": true
+            },
+            {
+                "value": "general",
+                "text": "General"
+            },
+            {
+                "value": "people-who-live-here",
+                "text": "People who live here"
+            },
+            {
+                "value": "visitors",
+                "text": "Visitors"
+            },
+            {
+                "value": "household-accommodation",
+                "text": "Household and accommodation"
+            },
+            {
+                "value": "personal-details",
+                "text": "Personal details"
+            },
+            {
+                "value": "health",
+                "text": "Health"
+            },
+            {
+                "value": "qualifications",
+                "text": "Qualifications"
+            },
+            {
+                "value": "employment",
+                "text": "Employment"
+            }
+        ]
+    })
+}}
+{{
+    onsSelect({
+        "id": "select",
+        "name": "select",
+        "label": {
+            "text": "Surveys"
+        },
+        "options": [
+            {
+                "value": "",
+                "text": "Select an option",
+                "disabled": true,
+                "selected": true
+            },
+            {
+                "value": "general",
+                "text": "General"
+            },
+            {
+                "value": "people-who-live-here",
+                "text": "People who live here"
+            },
+            {
+                "value": "visitors",
+                "text": "Visitors"
+            },
+            {
+                "value": "household-accommodation",
+                "text": "Household and accommodation"
+            },
+            {
+                "value": "personal-details",
+                "text": "Personal details"
+            },
+            {
+                "value": "health",
+                "text": "Health"
+            },
+            {
+                "value": "qualifications",
+                "text": "Qualifications"
+            },
+            {
+                "value": "employment",
+                "text": "Employment"
+            }
+        ]
+    })
+}}
+{{
+    onsInput({
+        "id": "email",
+        "type": "text",
+        "autocomplete": "email",
+        "value": "ons.gov.uk/",
+        "label": {
+            "text": "URL",
+            "description": "This will not be stored and only used once to send your confirmation"
+        }
+    })
+}}
+
+    {{ onsButton({
+        "classes": 'ons-u-mb-m ons-u-mt-l',
+        "text": 'Confirm',
+        "url": 'summary'
+    }) }}
+
+</div>
+
++++

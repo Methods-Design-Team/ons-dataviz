@@ -1,0 +1,31 @@
+.ons-u-dib {
+  display: inline-block;
+}
+
+.ons-u-di {
+  display: inline;
+}
+
+.ons-u-db {
+  display: block;
+}
+
+// Utility class to override the height property to 'auto'
+.ons-u-ha {
+  height: auto;
+}
+
+// Utility class to force non-wrapping of values
+.ons-u-nowrap {
+  white-space: nowrap;
+}
+
+// Utility class to set direction right to left
+.ons-u-rtl {
+  direction: rtl;
+}
+
+// Set an element's width to be auto at specified breakpoint
+@include bp-suffix(ons-u-wa--) {
+  width: auto !important;
+}

@@ -1,0 +1,12 @@
+*
+!/components/**/*
+!/css/**/*
+!/favicons/**/*
+!/fonts/**/*
+!/img/**/*
+!/layout/**/*
+!/scripts/**/*
+!/js/**/*
+!/scss/**/*
+!/LICENSE
+!/package.json

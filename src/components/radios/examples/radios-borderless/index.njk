@@ -1,0 +1,48 @@
+{% from "components/radios/_macro.njk" import onsRadios %}
+
+{{
+    onsRadios({
+        "name": "download-format",
+        "legend": "Select download format",
+        "borderless": true,
+        "radios": [
+            {
+                "id": "xls",
+                "label": {
+                    "text": "XLS format (78.9 KB)",
+                    "description": "Includes supporting information"
+                },
+                "value": "xls"
+            },
+            {
+                "id": "csv",
+                "label": {
+                    "text": "CSV format (554.7 KB)"
+                },
+                "value": "csv"
+            },
+            {
+                "id": "csvw",
+                "label": {
+                    "text": "CSVW format (1.9 KB)"
+                },
+                "value": "csvw"
+            },
+            {
+                "id": "json",
+                "label": {
+                    "text": "JSON file (10.9 KB)"
+                },
+                "value": "json"
+            },
+            {
+                "id": "supporting",
+                "label": {
+                    "text": "Support information (2.6 KB)"
+                },
+                "value": "supporting"
+            }
+        ]
+    })
+}}
+
