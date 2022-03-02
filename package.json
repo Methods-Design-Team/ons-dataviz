@@ -10,7 +10,7 @@
     "url": "https://github.com/bameyrick"
   },
   "scripts": {
-    "start": "node app.js",
+    "start": "gulp serve",
     "postinstall": "gulp default",
     "watch": "gulp watch",
     "build": "yarn && yarn tidy-clean && NODE_ENV=production gulp build",
