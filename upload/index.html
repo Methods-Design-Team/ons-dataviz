@@ -223,7 +223,7 @@
 
     <div class="ons-field" id='title-field'>
   <label class="ons-label" for="text">Title</label>
-  <input type="text" name='title' id="text" class="ons-input ons-input--text ons-input-type__input" />
+  <input type="text" id="title" class="ons-input ons-input--text ons-input-type__input" value='' />
 </div>
     <div class="ons-panel ons-panel--error ons-panel--no-title ons-u-mb-s" id='error-panel' style='display:none'>
         <span class="ons-u-vh">Error: </span>
@@ -678,95 +678,6 @@
 
 
 
-    
-    
-    
-    
-    
-
-    
-        
-    
-
-    
-    
-
-    
-    
-
-    
-
-    
-        
-    
-
-    
-
-    
-        
-        
-            <div
-                
-                class="ons-field"
-                
-            >
-                
-            
-                
-        
-            
-    
-
-    <label
-        class="ons-label ons-label--with-description"
-         for="email"
-        
-        
-    >URL</label>
-        <span
-          id="description-hint"
-          class="ons-label__description  ons-input--with-description">This will not be stored and only used once to send your confirmation</span>
-
-        
-
-        
-            
-        <input
-            type="text"
-            id="email"
-            class="ons-input ons-input--text ons-input-type__input"
-            
-            
-            value="ons.gov.uk/"
-            
-            
-            
-            
-            
-            
-            
-            autocomplete="email"
-            
-            
-            
-            
-            aria-describedby="description-hint"
-            
-        />
-        
-        
-    
-        
-    
-            
-        
-            </div>
-        
-    
-    
-
-    
-
     <button type="submit" class="ons-btn ons-u-mb-m ons-u-mt-l" id='button' onClick='check()'>
   <span class="ons-btn__inner">Confirm</span>
 </button>
@@ -776,7 +687,9 @@
 
 <script>
 function check(){
-if(document.getElementById("number").value.length == 0){
+    var title = document.getElementById("title").value;
+    console.log(title)
+if(title == ''){
     document.getElementById("title-field").style.display = 'none';
     document.getElementById("error-panel").style.display = 'block';
     window.location.hash = 'error-panel';
