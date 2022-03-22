@@ -238,6 +238,7 @@
 </div>
     <div class="ons-field" id='title-field'>
   <label class="ons-label" for="text">Title</label>
+  <span id="description-hint" class="ons-label__description  ons-input--with-description">It will help to search for the interactive later</span>
   <input type="text" id="title" class="ons-input ons-input--text ons-input-type__input" value='' />
 </div>
     <div class="ons-panel ons-panel--error ons-panel--no-title ons-u-mb-s" id='error-panel' style='display:none'>
@@ -720,7 +721,7 @@
 
 <script>
 function check(){
-    var title = document.getElementById("title").value;
+    var title = document.getElementById("dvc").value;
     console.log(title)
 if(title == ''){
     document.getElementById("title-field").style.display = 'none';
@@ -728,7 +729,7 @@ if(title == ''){
     window.location.hash = 'error-panel';
 }
 else{
-window.location.href = './';
+window.location.href = './#showcontent';
 }
 }
 

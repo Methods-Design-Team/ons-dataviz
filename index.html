@@ -86,6 +86,7 @@
 
 
 
+
     
     
     
@@ -199,7 +200,136 @@
 
 
 <div class="ons-container ons-container--wide" style='margin-top:30px'>
-<div class='ons-grid ons-grid--loose'>
+  <div id='hidden'>
+  
+
+    
+
+    
+        
+    
+
+    
+        
+    
+
+    
+
+    
+
+    
+
+    
+
+        <div class="ons-panel ons-panel--success ons-panel--no-title" id="success-id">
+
+            
+
+            
+
+            
+                
+                    
+                        
+                            <span class="ons-u-vh">Completed: </span>
+                        
+                    
+                
+
+                
+                    
+                    <span class= "ons-panel__icon ons-u-fs-r">
+                        
+
+    
+
+    
+    
+        <svg class="ons-svg-icon" viewBox="0 0 13 10" xmlns="http://www.w3.org/2000/svg" focusable="false" fill="currentColor">
+            <path d="M14.35,3.9l-.71-.71a.5.5,0,0,0-.71,0h0L5.79,10.34,3.07,7.61a.51.51,0,0,0-.71,0l-.71.71a.51.51,0,0,0,0,.71l3.78,3.78a.5.5,0,0,0,.71,0h0L14.35,4.6A.5.5,0,0,0,14.35,3.9Z" transform="translate(-1.51 -3.04)"/>
+        </svg>
+    
+
+                    </span>
+                
+            
+
+            <div class="ons-panel__body">Interactive has been successfully submitted
+                
+            </div>
+
+        </div>
+
+    
+
+
+</div>
+  <div id='hidden_'>
+  
+
+    
+
+    
+        
+    
+
+    
+        
+    
+
+    
+
+    
+
+    
+
+    
+
+        <div class="ons-panel ons-panel--success ons-panel--no-title" id="success-id">
+
+            
+
+            
+
+            
+                
+                    
+                        
+                            <span class="ons-u-vh">Completed: </span>
+                        
+                    
+                
+
+                
+                    
+                    <span class= "ons-panel__icon ons-u-fs-r">
+                        
+
+    
+
+    
+    
+        <svg class="ons-svg-icon" viewBox="0 0 13 10" xmlns="http://www.w3.org/2000/svg" focusable="false" fill="currentColor">
+            <path d="M14.35,3.9l-.71-.71a.5.5,0,0,0-.71,0h0L5.79,10.34,3.07,7.61a.51.51,0,0,0-.71,0l-.71.71a.51.51,0,0,0,0,.71l3.78,3.78a.5.5,0,0,0,.71,0h0L14.35,4.6A.5.5,0,0,0,14.35,3.9Z" transform="translate(-1.51 -3.04)"/>
+        </svg>
+    
+
+                    </span>
+                
+            
+
+            <div class="ons-panel__body">Interactive has been successfully updated
+                
+            </div>
+
+        </div>
+
+    
+
+
+</div>
+<div class='ons-grid' style='margin-top:5%'>
+  
     <div class='ons-grid__col ons-col-3@m'>
     <h3>Filter by</h3>
         
@@ -539,13 +669,6 @@
                 
             >Title</option>
             
-            <option value="topic"
-                
-                
-                
-                
-            >Topic</option>
-            
         </select>
     
             </div>
@@ -833,6 +956,7 @@
 </div>
 
 
+
     
     
 
@@ -941,7 +1065,24 @@
 
 
 <script>
+var url = window.location.href;
 
+if (url.includes("showcontent"))
+{
+  console.log('hello')
+  document.getElementById("hidden").style.display = "block";
+  document.getElementById("hidden_").style.display = "none";
+}
+else if (url.includes("updated"))
+{
+  console.log('hello')
+  document.getElementById("hidden_").style.display = "block";
+  document.getElementById("hidden").style.display = "none";
+}
+else{
+document.getElementById("hidden").style.display = "none";
+document.getElementById("hidden_").style.display = "none";
+  }
 </script>
 
 
