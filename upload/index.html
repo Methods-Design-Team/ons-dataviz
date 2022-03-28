@@ -99,7 +99,7 @@
                 <div class="ons-header__grid-top ons-grid ons-grid--gutterless ons-grid--flex ons-grid--between ons-grid--vertical-center ons-grid--no-wrap">
 
                     <div class="ons-grid__col ons-col-auto">
-                        <div class="ons-header__logo--large"><a class="ons-header__logo-link" href="#0">
+                        <div class="ons-header__logo--large"><a class="ons-header__logo-link" href="./">
 
     
 
@@ -146,7 +146,7 @@
     
 </a></div>
                         <div class="ons-header__logo--small">
-                            <a class="ons-header__logo-link" href="#0">
+                            <a class="ons-header__logo-link" href="./">
                             
 
     
@@ -179,7 +179,7 @@
             <div class="ons-container">
                 <div class="ons-grid ons-grid--gutterless ons-grid--flex ons-grid--between ons-grid--vertical-center ons-grid--no-wrap">
                     <div class="ons-grid__col ons-col-auto ons-u-flex-shrink">
-                        <a class="ons-header__title-link" href="#0">
+                        <a class="ons-header__title-link" href="./">
                         
                             <div class="ons-header__title">Manage my interactives</div>
                         
@@ -232,7 +232,7 @@
             </p>
             <div class="ons-field">
             <label class="ons-label" for="number">Internal ID</label>
-            <input type="text" id="dvc" class="ons-input ons-input--text ons-input-type__input " min required="required" />
+            <input type="text" id="dvc_" class="ons-input ons-input--text ons-input-type__input " min required="required" />
             </div>
         </div>
 </div>
@@ -727,7 +727,7 @@
 function check(){
     var title = document.getElementById("dvc").value;
     console.log(title)
-if(title == ''){
+if((document.getElementById("dvc").value == '') && (document.getElementById("dvc_").value == '')){
     document.getElementById("title-field").style.display = 'none';
     document.getElementById("error-panel").style.display = 'block';
     window.location.hash = 'error-panel';
