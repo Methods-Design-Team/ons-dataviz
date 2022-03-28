@@ -256,7 +256,7 @@
 <div class="ons-field" id='title-field'>
   <label class="ons-label" for="dvc">Label</label>
   <span id="description-hint" class="ons-label__description  ons-input--with-description">It will be used to generate the URL</span>
-  <input type="text" id="dvc" class="ons-input ons-input--text ons-input-type__input" value='' />
+  <input type="text" id="label" onkeyup="Update()" class="ons-input ons-input--text ons-input-type__input" value='' />
 </div>
     <div class="ons-panel ons-panel--error ons-panel--no-title ons-u-mb-s" id='error-panel' style='display:none'>
         <span class="ons-u-vh">Error: </span>
@@ -390,6 +390,10 @@
     
 
 
+<div class="ons-field">
+  <label class="ons-label" for="text">URL</label>
+  <input type="text" disabled class="ons-input ons-input--text ons-input-type__input" value='ons.gov.uk/interactives/' id='url'/>
+</div>
 <!-- 
     
     
@@ -732,8 +736,13 @@ else{
 window.location.href = '../#showcontent';
 }
 }
-
 </script>
+<script>
+
+function Update() {
+   document.getElementById("url").value = 'ons.gov.uk/interactives/' + document.getElementById('label').value;
+};
+    </script>
           
     </main>
 
