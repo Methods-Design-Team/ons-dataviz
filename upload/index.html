@@ -219,8 +219,29 @@
         </ol>
     </nav>
 
+<div aria-labelledby="error-summary-title" role="alert" tabindex="-1" class="ons-panel ons-panel--error" id='summary-error' style='display:none'>
+  <div class="ons-panel__header">
+    <h2 id="error-summary-title" data-qa="error-header" class="ons-panel__title ons-u-fs-r--b">There are 4 problems with your answer</h2>
+  </div>
+  <div class="ons-panel__body">
+    <ol class="ons-list">
+      <li class="ons-list__item">
+        <a href="#error-panel" class="ons-list__link ons-js-inpagelink">Enter a correct internal ID</a>
+      </li>
+      <li class="ons-list__item">
+        <a href="#error-panel_title" class="ons-list__link ons-js-inpagelink">Enter a correct title</a>
+      </li>
+      <li class="ons-list__item">
+        <a href="#error-panel_label" class="ons-list__link ons-js-inpagelink">Enter a correct label, using only letters and numbers</a>
+      </li>
+      <li class="ons-list__item">
+        <a href="#file-error" class="ons-list__link ons-js-inpagelink">Select a file that is a ZIP archive</a>
+      </li>
+    </ol>
+  </div>
+</div>
  <h1 class="ons-u-fs-xxl ons-u-mt-l">Upload a new interactive</h1>
-<div class="ons-field" id='title-field'>
+<div class="ons-field" id='dvc-field'>
   <label class="ons-label" for="dvc">Internal ID</label>
   <input type="text" id="dvc" class="ons-input ons-input--text ons-input-type__input" value='' />
 </div>
@@ -241,7 +262,7 @@
   <span id="description-hint" class="ons-label__description  ons-input--with-description">It will help to search for the interactive later</span>
   <input type="text" id="title" class="ons-input ons-input--text ons-input-type__input" value='' />
 </div>
-    <div class="ons-panel ons-panel--error ons-panel--no-title ons-u-mb-s" id='error-panel' style='display:none'>
+    <div class="ons-panel ons-panel--error ons-panel--no-title ons-u-mb-s" id='error-panel_title' style='display:none'>
         <span class="ons-u-vh">Error: </span>
         <div class="ons-panel__body">
             <p class="ons-panel__error">
@@ -249,147 +270,51 @@
             </p>
             <div class="ons-field">
             <label class="ons-label" for="number">Title</label>
-            <input type="text" id="number" class="ons-input ons-input--text ons-input-type__input " min required="required" />
+            <input type="text" id="title_" class="ons-input ons-input--text ons-input-type__input " min required="required" />
             </div>
         </div>
 </div>
-<div class="ons-field" id='title-field'>
-  <label class="ons-label" for="dvc">Label</label>
+<div class="ons-field" id='label-field'>
+  <label class="ons-label" for="label">Label</label>
   <span id="description-hint" class="ons-label__description  ons-input--with-description">It will be used to generate the URL</span>
+  <span id="description-hint" class="ons-label__description  ons-input--with-description">Only alphanumerical characters are allowed</span>
   <input type="text" id="label" pattern="[a-zA-Z0-9 ]+" onkeyup="Update()" class="ons-input ons-input--text ons-input-type__input" value='' />
 </div>
-    <div class="ons-panel ons-panel--error ons-panel--no-title ons-u-mb-s" id='error-panel' style='display:none'>
+    <div class="ons-panel ons-panel--error ons-panel--no-title ons-u-mb-s" id='error-panel_label' style='display:none'>
         <span class="ons-u-vh">Error: </span>
         <div class="ons-panel__body">
             <p class="ons-panel__error">
-            <strong>Enter a correct label</strong>
+            <strong>Enter a correct label, using only letters and numbers</strong>
             </p>
             <div class="ons-field">
-            <label class="ons-label" for="number">Internal ID</label>
-            <input type="text" id="dvc" class="ons-input ons-input--text ons-input-type__input " min required="required" />
+            <label class="ons-label" for="number">Label</label>
+            <input type="text" id="label_" class="ons-input ons-input--text ons-input-type__input " min required="required" />
             </div>
         </div>
 </div>
+<div class="ons-field" id='file-input'>
+  <div class="ons-field">
+    <label class="ons-label ons-label--with-description" for="file">Upload a file</label>
+    <span id="description-hint" class="ons-label__description  ons-input--with-description">Only file type accepted is ZIP</span>
+    <input type="file" id="file" class="ons-input ons-input--text ons-input-type__input ons-input--upload" accept=".xls,.xlsx,.pdf" aria-describedby="description-hint" />
+  </div>
+</div>
 
-
-    
-    
-
-    
-
-    
-    
-
-    
-
-    
-        
-        
-            <div
-                
-                class="ons-field"
-                
-            >
-                
-        
-        
-    
-    
-    
-    
-    
-
-    
-        
-    
-
-    
-    
-
-    
-    
-
-    
-
-    
-        
-    
-
-    
-
-    
-        
-        
-            <div
-                
-                class="ons-field"
-                
-            >
-                
-            
-                
-        
-            
-    
-
-    <label
-        class="ons-label ons-label--with-description"
-         for="file"
-        
-        
-    >Upload a file</label>
-        <span
-          id="description-hint"
-          class="ons-label__description  ons-input--with-description">Only file type accepted is ZIP</span>
-
-        
-
-        
-            
-        <input
-            type="file"
-            id="file"
-            class="ons-input ons-input--text ons-input-type__input ons-input--upload"
-            
-            
-            
-            accept=".zip"
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            aria-describedby="description-hint"
-            
-        />
-        
-        
-    
-        
-    
-            
-        
-            </div>
-        
-    
-    
-
-    
-
-    
-    
-            </div>
-        
-    
-    
-
-
+<div class="ons-panel ons-panel--error ons-panel--no-title ons-u-mb-s" id="file-error" style='display: none'>
+  <span class="ons-u-vh">Error: </span>
+  <div class="ons-panel__body">
+    <p class="ons-panel__error">
+      <strong>Select a file that is a ZIP archive</strong>
+    </p>
+    <div class="ons-field">
+      <div class="ons-field">
+        <label class="ons-label ons-label--with-description" for="file">Upload a file</label>
+        <span id="description-hint" class="ons-label__description  ons-input--with-description">File types accepted are XLS and XLSX or PDF</span>
+        <input type="file" id="file" class="ons-input ons-input--text ons-input-type__input ons-input--upload ons-input--error" accept=".xls,.xlsx,.pdf" aria-describedby="description-hint" />
+      </div>
+    </div>
+  </div>
+</div>
 <div class="ons-field">
   <label class="ons-label" for="text">URL</label>
   <input type="text" disabled class="ons-input ons-input--text ons-input-type__input" value='ons.gov.uk/interactives/' id='url'/>
@@ -725,16 +650,20 @@
 
 <script>
 function check(){
-    var title = document.getElementById("dvc").value;
-    console.log(title)
+    var dvc = document.getElementById("dvc").value;
+
 if((document.getElementById("dvc").value == '') && (document.getElementById("dvc_").value == '')){
-    document.getElementById("title-field").style.display = 'none';
+    document.getElementById("dvc-field").style.display = 'none';
+    document.getElementById("summary-error").style.display = 'block';
+        document.getElementById("file-input").style.display = 'none';
+    document.getElementById("file-error").style.display = 'block';
     document.getElementById("error-panel").style.display = 'block';
-    window.location.hash = 'error-panel';
-}
-else{
-window.location.href = '../#showcontent';
-}
+   document.getElementById("label-field").style.display = 'none';
+    document.getElementById("error-panel_label").style.display = 'block';
+   document.getElementById("title-field").style.display = 'none';
+    document.getElementById("error-panel_title").style.display = 'block';
+    window.scrollTo(0, 0);
+    }
 }
 </script>
 <script>
@@ -743,7 +672,6 @@ function Update() {
     let url = document.getElementById("url").value;
     let label = document.getElementById("label").value
     label = label.replace(/\s+/g, '-').toLowerCase();
-    console.log(label)
    document.getElementById("url").value = 'ons.gov.uk/interactives/' + label;
 
 };
